@@ -13,4 +13,4 @@ class Wall extends React.Component {
   }
 }
 
-export default Wall;
+export default Wall;  

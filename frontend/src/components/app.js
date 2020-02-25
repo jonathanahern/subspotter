@@ -6,12 +6,9 @@ import NavBarContainer from './nav/navbar_container';
 import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
-<<<<<<< HEAD
 import Sidebar from './nav/sidebar';
 import WallContainer from './wall/wall_container';
 import MapContainer from './map/map_container';
-=======
->>>>>>> 5450377b358f5be6149c9e30a5e20d7feede621f
 import SpotsContainer from './spots/spots_container';
 import SpotFormContainer from './spots/spot_form_container';
 import ProfileContainer from './profile/profile_container';
@@ -21,24 +18,15 @@ const App = () => (
     <Sidebar />
     <NavBarContainer />
     <Switch>
-<<<<<<< HEAD
       <Route exact path="/wall" component={WallContainer} />
       <Route exact path="/map" component={MapContainer} />
-=======
->>>>>>> 5450377b358f5be6149c9e30a5e20d7feede621f
       <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       
-<<<<<<< HEAD
       <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} />    
       <Route exact path="/spots" component={SpotsContainer} />
       <ProtectedRoute exact path="/spotter" component={ProfileContainer} />
-=======
-      <ProtectedRoute exact path="/spots" component={SpotsContainer} />
-      <ProtectedRoute exact path="/spotter" component={ProfileContainer} />
-      <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} />    
->>>>>>> 5450377b358f5be6149c9e30a5e20d7feede621f
     </Switch>
   </div>
 );

@@ -21,15 +21,11 @@ class Spots extends React.Component {
 
   render() {
     if (this.state.spots.length === 0) {
-<<<<<<< HEAD
       return (
         <div>
           <h1>spots.js</h1>
           There are no Spottings
         </div>)
-=======
-      return (<div>There are no Spottings</div>)
->>>>>>> 5450377b358f5be6149c9e30a5e20d7feede621f
     } else {
       return (
         <div>
