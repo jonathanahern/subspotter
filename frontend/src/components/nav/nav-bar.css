@@ -1,0 +1,85 @@
+body, html{
+    height: 100%;
+}
+
+#hamburger{
+    font-size:30px;
+}
+
+.close {
+    width: 0;
+}
+
+.open {
+    width: 250px;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#sidebar-container{
+    background-color: lightgray;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.1s;
+    box-shadow: #e0e0e0 2px 2px 0;
+}
+
+#sidebar-container .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo-container {
+    background-color: blue;
+    position: relative;
+    padding: 10px;
+}
+.logo-container img {
+    height: 30px;
+}
+
+.logo-container h1 {
+    font-family: 'Baloo Bhai', sans-serif;
+    color:white;
+    position: absolute;
+    top: -10px;
+    left: 44px;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+#top-line, #bottom-line {
+    border-bottom: 2px solid white;
+    position: absolute;    
+}
+
+#top-line {
+    top: 10px;
+    left: 26px;
+    width: 172px;
+}
+
+#bottom-line {
+    bottom: 18px;
+    left: 38px;
+    width: 160px;
+}
+
+#sidebar-container li {
+    padding: 20px 0;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 24px;
+}
