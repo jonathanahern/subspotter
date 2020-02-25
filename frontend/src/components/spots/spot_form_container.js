@@ -16,4 +16,8 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+<<<<<<< HEAD
 export default connect(null, mapDispatchToProps)(SpotForm);
+=======
+export default connect(null, mapDispatchToProps)(SpotForm);
+>>>>>>> clean up merge conflicts
