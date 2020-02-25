@@ -27,7 +27,7 @@ class Sidebar extends React.Component {
                     <h1>SUBSPOTTER</h1>
                 </div>
                 <ul className="link-container">
-                    <li> <Link to="/spots/create" id="navLink">Spot It</Link></li>
+                    <li> <Link to="/spots/new" id="navLink">Spot It</Link></li>
                     <li> <Link to="/wall" id="navLink">Wall</Link></li>
                     <li> <Link to="/map" id="navLink">Map</Link></li>
                 </ul>
