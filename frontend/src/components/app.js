@@ -10,6 +10,9 @@ import Footer from './nav/footer';
 import SpotsFormContainer from './spots/spots_form_container';
 import WallContainer from './wall/wall_container';
 import MapContainer from './map/map_container';
+import SpotsContainer from './spots/spots_container';
+import SpotFormContainer from './spots/spot_form_container';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
   <div>
@@ -21,6 +24,13 @@ const App = () => (
         <Route exact path="/spots/create" component={SpotsFormContainer} />
         <Route exact path="/wall" component={WallContainer} />
         <Route exact path="/map" component={MapContainer} />
+      <AuthRoute exact path="/" component={MainPage} />
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      
+      <ProtectedRoute exact path="/spots" component={SpotsContainer} />
+      <ProtectedRoute exact path="/spotter" component={ProfileContainer} />
+      <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} />    
     </Switch>
     <Footer/>
   </div>
