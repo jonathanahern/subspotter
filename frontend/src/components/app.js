@@ -26,7 +26,7 @@ const App = () => (
       
       <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} />    
       <Route exact path="/spots" component={SpotsContainer} />
-      <ProtectedRoute exact path="/spotter" component={ProfileContainer} />
+      <Route exact path="/spotter" component={ProfileContainer} />
     </Switch>
     <Footer/>
   </div>
