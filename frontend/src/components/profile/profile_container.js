@@ -2,12 +2,12 @@ import { connect } from 'react-redux';
 import { fetchUserSpots } from '../../actions/spot_actions';
 import Profile from './profile';
 
-const mapStateToProps = (state) => {
-  return {
-    spots: Object.values(state.spots.user),
-    currentUser: state.session.user
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     spots: Object.values(state.spots.username),
+//     currentUser: state.session.user
+//   };
+// };
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(null, mapDispatchToProps)(Profile);

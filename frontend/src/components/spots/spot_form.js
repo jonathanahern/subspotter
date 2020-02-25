@@ -7,7 +7,9 @@ class SpotForm extends React.Component {
 
       this.state = {
           title: "",
-          description: ""
+          body: "",
+          // user_id: this.props.currentUser.id,
+          stop_id: "",
       }
 
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,6 +38,7 @@ class SpotForm extends React.Component {
   render() {
     return (
         <div>
+          <h1>spot_form.js</h1>
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <input type="text"
