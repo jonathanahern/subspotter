@@ -1,7 +1,7 @@
 import React from 'react';
 import "./main_page.css";
-import trainLogo from "./trainLogo.png"
-import { Link } from "react-router-dom"
+import trainLogo from "./trainLogo.png";
+import { Link } from "react-router-dom";
 
 class MainPage extends React.Component {
 
