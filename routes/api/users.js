@@ -4,6 +4,7 @@ const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require("jsonwebtoken");
+const passport = require('passport');
 
 router.get("/test", (req, res) => {
   res.json({msg: "This is the user route"})

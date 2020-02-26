@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.use(passport.initialize());
-// require('./config/passport')(passport);
+require('./config/passport')(passport);
 
 app.get("/", (req, res) => {
   res.send("Second Hello World");
