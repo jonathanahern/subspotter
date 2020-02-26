@@ -5,8 +5,10 @@ const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
 const stops = require("./routes/api/stops");
 const spots = require("./routes/api/spots");
-const User = require("./models/User");
 const bodyParser = require('body-parser')
+const passport = require('passport');
+
+const User = require("./models/User");
 
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -18,6 +20,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+
+app.use(passport.initialize());
+// require('./config/passport')(passport);
 
 app.get("/", (req, res) => {
   res.send("Second Hello World");
