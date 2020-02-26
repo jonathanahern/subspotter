@@ -11,14 +11,16 @@ body{
 }
 
 
-.signup-form-container {
+.signup-form-container, .login-container {
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.signup-form div:first-child{
+
+
+.signup-form div:first-child, .login-container{
     padding: 20px;
     padding-bottom: 50px;
     padding-top: 100px;
@@ -35,7 +37,8 @@ body{
     margin-left: 260px;
 }
 
-.signup-form input[type=text], .signup-form input[type=password] {
+.signup-form input[type=text], .signup-form input[type=password],
+.login-container input[type=text], .login-container input[type=password] {
     background-color: white;
     border-radius: 5px;
     border: lightgray 2px solid;
@@ -45,7 +48,7 @@ body{
     width: 300px;
 }
 
-.signup-form input[type=submit] {
+.signup-form input[type=submit], .login-container input[type=submit] {
     background-color: #F39422;
     width: 222px;
     height: 44px;

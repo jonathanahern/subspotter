@@ -34,8 +34,8 @@ class SignupForm extends React.Component {
     e.preventDefault();
     let user = {
       username: this.state.username,
-      password: this.state.password,
-      password2: this.state.password2
+      password: this.state.password
+      // password2: this.state.password2
     };
 
     this.props.signup(user, this.props.history); 
