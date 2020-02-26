@@ -3,8 +3,12 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
-const User = require("./models/User");
+const stops = require("./routes/api/stops");
+const spots = require("./routes/api/spots");
 const bodyParser = require('body-parser')
+const passport = require('passport');
+
+const User = require("./models/User");
 
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -17,16 +21,16 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+app.use(passport.initialize());
+require('./config/passport')(passport);
+
 app.get("/", (req, res) => {
-  const user = new User({
-    username: "jwang", 
-    password: "abc123"
-  })
-  user.save()
   res.send("Second Hello World");
 });
 
 app.use("/api/users", users);
+app.use("/api/stops", stops);
+app.use("/api/spots", spots);
 
 const port = process.env.PORT || 5000;
 
