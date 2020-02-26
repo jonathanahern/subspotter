@@ -31,9 +31,11 @@ class Spots extends React.Component {
       return (
         <div>
           <h2>All Spottings</h2>
+          <ul>
           {this.state.spots.map(spot => (
             <SpotItem key={spot.id} title={spot.title} body={spot.body} userId={spot.user_id} stopId={spot.stop_id} />
           ))}
+          </ul>
         </div>
       );
     }
