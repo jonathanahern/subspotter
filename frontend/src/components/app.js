@@ -24,7 +24,11 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       
+<<<<<<< HEAD
       <ProtectedRoute exact path="/spots/create" component={SpotFormContainer} />    
+=======
+      <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} />    
+>>>>>>> 7ad20d9896ab6d5bf282cefcec0da799c748d9de
       <Route exact path="/spots" component={SpotsContainer} />
       <Route exact path="/spotter" component={ProfileContainer} />
     </Switch>

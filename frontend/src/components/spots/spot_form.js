@@ -43,7 +43,6 @@ class SpotForm extends React.Component {
   }
 
   render() {
-    debugger
     return (
         <div>
           <h1>spot_form.js</h1>
