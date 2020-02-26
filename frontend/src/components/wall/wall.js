@@ -8,9 +8,9 @@ class Wall extends React.Component {
 
   render() {
     return (
-       <h1>Wall</h1>
+       <h1>wall.js</h1>
     );
   }
 }
 
-export default Wall;
+export default Wall;  
