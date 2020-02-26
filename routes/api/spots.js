@@ -28,13 +28,12 @@ router.post("/",
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const { errors, isValid } = validateSpotInput(req.body);
-
     if (!isValid) {
       return res.status(400).json(errors);
     }
 
     const stop_id = Stop.findById(req.body.stop_id)
-
+// debugger
     const newSpot = new Spot({
       title: req.body.title,
       body: req.body.body,
