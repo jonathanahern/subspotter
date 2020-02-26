@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT, RECEIVE_USER_SPOTS, RECEIVE_NEW_SPOT} from '../actions/spot_actions';
 
-const SpotsReducer = (state = { all: {}, user: {}, new: undefined }, action) => {
+export default function(state = { all: {}, user: {}, new: undefined }, action) {
   Object.freeze(state);
   let newState = Object.assign({}, state);
 
@@ -25,5 +25,3 @@ const SpotsReducer = (state = { all: {}, user: {}, new: undefined }, action) => 
       return state;
   }
 };
-
-export default SpotsReducer;

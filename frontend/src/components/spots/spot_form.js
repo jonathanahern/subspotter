@@ -8,7 +8,7 @@ class SpotForm extends React.Component {
       this.state = {
           title: "",
           body: "",
-          // user_id: this.props.currentUser.id,
+          user_id: this.props.currentUser.id,
           stop_id: "",
       }
 
@@ -22,11 +22,18 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let spot = {
-      title: this.state.title
+      title: this.state.title,
+      body: this.state.body,
+      user_id: this.state.user_id,
+      stop_id: this.state.stop_id,
     };
 
     this.props.composeSpot(spot); 
-    this.setState({title: ''})
+    this.setState({
+      title: '',
+      body: '',
+      stop_id: '',
+  })
   }
 
   update(field) {
@@ -36,6 +43,7 @@ class SpotForm extends React.Component {
   }
 
   render() {
+    debugger
     return (
         <div>
           <h1>spot_form.js</h1>
@@ -44,7 +52,17 @@ class SpotForm extends React.Component {
                     <input type="text"
                         value={this.state.title}
                         onChange={this.update('title')}
-                        placeholder="report your Spotting"
+                        placeholder="title"
+                    />
+                    <input type="text"
+                        value={this.state.body}
+                        onChange={this.update('body')}
+                        placeholder="body"
+                    />
+                    <input type="text"
+                        value={this.state.stop_id}
+                        onChange={this.update('stop_id')}
+                        placeholder="stop_id"
                     />
                     <input type="submit" value="Submit" />
                 </div>

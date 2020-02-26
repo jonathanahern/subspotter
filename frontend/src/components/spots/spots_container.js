@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import Spots from './spots';
 
-// const mapStateToProps = (state) => {
-//   return {
-//     spots: Object.values(state.spots.all)
-//   };
-// };
+const mapStateToProps = (state) => {
+  debugger
+  return {
+    spots: Object.values(state.spots.all)
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -14,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Spots);
+export default connect(mapStateToProps, mapDispatchToProps)(Spots);

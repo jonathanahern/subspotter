@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(SpotForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SpotForm);
