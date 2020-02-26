@@ -14,8 +14,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-<<<<<<< HEAD
 export default connect(null, mapDispatchToProps)(Spots);
-=======
-export default connect(null, mapDispatchToProps)(Spots);
->>>>>>> clean up merge conflicts
