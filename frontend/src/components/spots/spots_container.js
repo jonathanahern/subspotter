@@ -3,6 +3,7 @@ import { fetchAllSpots } from '../../actions/spot_actions';
 import Spots from './spots';
 
 const mapStateToProps = (state) => {
+  debugger
   return {
     spots: Object.values(state.spots.all)
   };

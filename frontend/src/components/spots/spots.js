@@ -13,13 +13,11 @@ class Spots extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllSpots();
-  }
-
-  componentWillReceiveProps(newState) {
-    this.setState({ spots: newState.spots });
+    this.setState({ spots: this.props.spots });
   }
 
   render() {
+    debugger
     if (this.state.spots.length === 0) {
       return (
         <div>
