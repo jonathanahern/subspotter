@@ -30,6 +30,16 @@ class MainPage extends React.Component {
         </ul>
         
         {/* <footer>
+      <div>
+        <h1>SubSpotter</h1>
+        <ul>          
+        <li> <Link to="/spotter" id="navLink">Spotter Profile (profile.js)</Link></li>
+        <li> <Link to="/spots" id="navLink">Spots Index (spots.js)</Link></li>
+        <li> <Link to="/spots/create" id="navLink">Spots Create (spots_form.js)</Link></li>
+        <li> <Link to="/wall" id="navLink">Wall (wall.js)</Link></li>
+        <li> <Link to="/map" id="navLink">Map (map.js)</Link></li>
+        </ul>
+        <footer>
           Copyright &copy; 2020 TripleJProductions
         </footer> */}
 

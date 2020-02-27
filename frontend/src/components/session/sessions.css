@@ -10,15 +10,12 @@ body{
     z-index: -10;
 }
 
-
 .signup-form-container, .login-container {
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 
 .signup-form div:first-child, .login-container{
     padding: 20px;

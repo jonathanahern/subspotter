@@ -8,7 +8,7 @@ class Map extends React.Component {
 
   render() {
     return (
-       <h1>Map</h1>
+       <h1>map.js</h1>
     );
   }
 }
