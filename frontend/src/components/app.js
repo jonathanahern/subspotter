@@ -19,7 +19,7 @@ const App = () => (
     <Switch>
       <Route exact path="/wall" component={WallContainer} />
       <Route exact path="/map" component={MapContainer} />
-      <Route exact path="/" component={MainPage} />
+      <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       
