@@ -10,6 +10,15 @@ router.get("/test", (req, res) => {
   res.json({msg: "This is the user route"})
 });
 
+router.get("/:id", (req, res) => {
+  debugger
+  User.findById(req.params.id).populate('spots').exec()
+    .then(user => res.json(user.spots))
+    .catch(err =>
+      res.status(404).json({ nouserfound: "This user does not exist" })
+    );
+});
+
 router.post("/register", (req, res) => {
   User.findOne({ username: req.body.username })
   .then(user => {

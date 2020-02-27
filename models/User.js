@@ -10,10 +10,14 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  created_spots: [{
+  spots: [{
     type: Schema.Types.ObjectId, 
-    ref: 'Spots'
+    ref: 'Spot'
   }]
 })
+
+// UserSchema.methods.createdSpots = function(cb) {
+//   Spot.find({user_id: this.id}, cb);
+// }
 
 module.exports = User = mongoose.model('User', UserSchema);

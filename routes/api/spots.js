@@ -40,8 +40,17 @@ router.post("/",
       user_id: req.user.id,
       stop_id: req.body.stop_id
     });
-
+debugger
     newSpot.save().then(spot => res.json(spot));
+    User.findOneAndUpdate(
+      { _id: req.user.id },
+      { $push: { spots: newSpot } },
+      { new: true },
+      function (errors, data) {
+        debugger
+        return res.status(400).json(errors);
+      }
+    );
   }
 )
 
