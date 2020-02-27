@@ -35,15 +35,24 @@ class Map extends React.Component {
       disableDefaultUI: true
     };
 
-    this.map = new window.google.maps.Map(document.getElementById('myMap'), mapOptions);
-    var transitLayer = new window.google.maps.TransitLayer();
-    transitLayer.setMap(this.map);
-    this.map.set('clickableIcons', false);
-    this.map.set('styles', [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]);
+    // this.map = new window.google.maps.Map(document.getElementById('myMap'), mapOptions);
+    // var transitLayer = new window.google.maps.TransitLayer();
+    // transitLayer.setMap(this.map);
+    // this.map.set('clickableIcons', false);
+    // this.map.set('styles', [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]);
     
     this.selectedLine = document.getElementById("spanALL");
     
   }
+
+  update(field) {
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+
 
   handleLine(e){
     e.preventDefault();
@@ -87,12 +96,13 @@ class Map extends React.Component {
     return (
       <>
       <form >
+        
           <div id="filter-bar">
             <label className="filterLabel">START:
-              <input className="date-dropdown" type="date" id="datemin" name="datemin" />
+              <input className="date-dropdown" type="date" id="datemin" value={this.state.startDate} onChange={this.update("startDate")}/>
             </label>
             <label className="filterLabel">END:
-              <input className="date-dropdown" type="date" id="datemax" name="datemax" />
+              <input className="date-dropdown" type="date" id="datemax" value={this.state.endDate} onChange={this.update("endDate")} />
             </label>
           </div>
 
