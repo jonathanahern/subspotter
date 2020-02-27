@@ -25,12 +25,10 @@ router.post("/register", (req, res) => {
     if (user) {
       return res.status(400).json({username: "This user is already registered"})
     } else {
-      debugger
       const newUser = new User({
         username: req.body.username, 
         password: req.body.password
       })
-debugger
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
