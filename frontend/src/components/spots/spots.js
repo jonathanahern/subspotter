@@ -7,18 +7,20 @@ class Spots extends React.Component {
     super(props);
 
     this.state = {
-      spots: []
+      spots: [],
     }
   }
 
   componentDidMount() {
     this.props.fetchAllSpots();
+    debugger
     this.setState({ spots: this.props.spots });
+    debugger
   }
 
   render() {
     debugger
-    if (this.state.spots.length === 0) {
+    if (this.props.spots.length === 0) {
       return (
         <div>
           <h1>spots.js</h1>
@@ -29,7 +31,7 @@ class Spots extends React.Component {
         <div>
           <h2>All Spottings</h2>
           <ul>
-          {this.state.spots.map(spot => (
+          {this.props.spots.map(spot => (
             <SpotItem key={spot.id} title={spot.title} body={spot.body} userId={spot.user_id} stopId={spot.stop_id} />
           ))}
           </ul>
