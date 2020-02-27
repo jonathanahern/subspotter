@@ -15,9 +15,9 @@ class SpotForm extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
   } 
 
-  componentWillReceiveProps(nextProps) {
-      this.setState({newSpot: nextProps.newSpot.text});
-  }
+  // componentWillReceiveProps(nextProps) {
+  //     this.setState({newSpot: nextProps.newSpot.text});
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -34,6 +34,7 @@ class SpotForm extends React.Component {
       body: '',
       stop_id: '',
   })
+    
   }
 
   update(field) {
@@ -66,8 +67,6 @@ class SpotForm extends React.Component {
                     <input type="submit" value="Submit" />
                 </div>
             </form>
-            <br />
-            <SpotItem text={this.state.newSpot} />
         </div>
     )
   }

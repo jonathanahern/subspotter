@@ -6,7 +6,6 @@ const passport = require('passport');
 const validateSpotInput = require('../../validation/spots')
 
 router.get("/test", (req, res) => {
-  debugger
   res.json({ msg: "This is the spots route" })
 });
 
@@ -33,7 +32,6 @@ router.post("/",
     }
 
     // const stop_id = Stop.findById(req.body.stop_id)
-// debugger
     const newSpot = new Spot({
       title: req.body.title,
       body: req.body.body,
