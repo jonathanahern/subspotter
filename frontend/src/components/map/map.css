@@ -48,8 +48,18 @@ input[type=date]::-webkit-inner-spin-button {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     white-space: nowrap;
-    transition: all .2s ease-in-out;
-    margin: 0 8px;
+    transition: all .4s ease-in-out;
+    margin: 0 0px;
+
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    /* background-color: transparent; */
+    border-radius: 30px;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    /* flex-basis: 60px; */
 }
 
 
@@ -70,14 +80,15 @@ input[type=date]::-webkit-inner-spin-button {
 
 .border {
     /* border-bottom: black 3px solid; */
-    display: block;
+    /* display: block;
     height: 30px;
     width: 30px;
     line-height: 30px;
     background-color: white;
     border-radius: 30px;
     text-align: center;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out; */
+    background-color: white;
 }
 
 #spanALL{color:black;}

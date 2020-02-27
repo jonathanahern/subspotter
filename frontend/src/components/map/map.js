@@ -13,18 +13,21 @@ class Map extends React.Component {
       endDate: "2020-03-01"
     };
 
+    this.currentLine = "ALL";
     this.map = null;
     this.selectedLine = null;
     this.markersArray = [];
 
     this.handleLine = this.handleLine.bind(this);
     this.resetMarkers = this.resetMarkers.bind(this);
+    this.placeMarkers = this.placeMarkers.bind(this);
+    this.setDate = this.setDate.bind(this);
 
   }
 
   componentDidMount() {
-    document.getElementById("datemin").defaultValue = "2018-01-01";
-    document.getElementById("datemax").defaultValue = "2020-03-01";
+    document.getElementById("datemin").defaultValue = "2018-01-02";
+    this.setDate();
 
     const mapOptions = {
       center: { lat: 40.722207, lng: -73.949497 },
@@ -44,12 +47,27 @@ class Map extends React.Component {
 
   handleLine(e){
     e.preventDefault();
-    let val = e.currentTarget.attributes.value.value;
+    let val = e.currentTarget.attributes.value.value.toLowerCase();
     this.selectedLine.className = '';
     this.selectedLine = e.currentTarget;
     e.currentTarget.className = 'border';
-    this.setState({ line: val.toLowerCase() })
+    this.currentLine = val
+    this.setState({ line: val });
     this.resetMarkers();
+  }
+
+  setDate(){
+    let newDate = new Date();
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    if (month.toString().length < 2) {
+      month = "0" + month.toString();
+    }
+    if (date.toString().length < 2) {
+      date = "0" + date.toString();
+    }
+    document.getElementById("datemax").defaultValue = `${year}-${month}-${date}`;
   }
 
   resetMarkers(){
@@ -62,35 +80,20 @@ class Map extends React.Component {
   }
 
   placeMarkers(){
-
+    console.log(this.currentLine)
   }
-
 
   render() {
     return (
       <>
       <form >
           <div id="filter-bar">
-          <label className="filterLabel">START:
-            <input className="date-dropdown" type="date" id="datemin" name="datemin" />
-          </label>
-          <label className="filterLabel">END:
-            <input className="date-dropdown" type="date" id="datemax" name="datemax" />
-          </label>
-          {/* <label className="filterLabel">SUBWAY LINE:
-          <select id="line-dropdown">
-            <option key="ALL" value="ALL">ALL</option>
-            <option id="option123" key="123" value="123">123</option>
-            <option key="456" value="456">456</option>
-            <option key="7" value="7">7</option>
-            <option key="ACE" value="ACE">ACE</option>
-            <option key="G" value="G">G</option>
-            <option key="BDFM" value="BDFM">BDFM</option>
-            <option key="JZ" value="JZ">JZ</option>
-            <option key="LS" value="LS">LS</option>
-            <option key="NQRW" value="NQRW">NQRW</option>
-          </select>
-          </label> */}
+            <label className="filterLabel">START:
+              <input className="date-dropdown" type="date" id="datemin" name="datemin" />
+            </label>
+            <label className="filterLabel">END:
+              <input className="date-dropdown" type="date" id="datemax" name="datemax" />
+            </label>
           </div>
 
           <div id="line-select">
