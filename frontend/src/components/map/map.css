@@ -1,9 +1,92 @@
-      #root {
-          height: 100%;
-      }
-      
-      #myMap {
-        height: 90%;
-        width: 100%;
-      }
-      
+#root {
+    height: 100%;
+    overflow: hidden;
+}
+
+#myMap {
+    height: 78%;
+    width: 100%;
+}
+
+#filter-bar{
+    height: 30px;
+    width: 100%;
+    background-color: #537EC5;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border: none;
+}
+
+.date-dropdown{
+    width: 140px;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 6px;
+    background-color: white;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+#line-select{
+    height: 35px;
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3px;
+    padding-right: 10px;
+}
+
+#line-select span{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: all .2s ease-in-out;
+    margin: 0 8px;
+}
+
+
+#line-dropdown {
+    background-color: white;
+    border: white 2px solid;
+    height: 22px;
+    margin-left: 2px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.filterLabel{
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 6px;
+}
+
+.border {
+    /* border-bottom: black 3px solid; */
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+#spanALL{color:black;}
+#span123{color:red;}
+#span456{color:green;}
+#span7{color:purple;}
+#spanACE{color:blue;}
+#spanG{color:rgb(38, 235, 38);}
+#spanBDFM{color:orange;}
+#spanJZ{color:brown;}
+#spanLS{color:grey;}
+#spanNQRW{color:yellow;}
