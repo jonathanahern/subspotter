@@ -20,7 +20,6 @@ class Spots extends React.Component {
   }
 
   render() {
-    debugger
     if (this.state.spots.length === 0) {
       return (
         <div>
