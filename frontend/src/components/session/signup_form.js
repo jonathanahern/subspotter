@@ -7,6 +7,7 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       password: '',
+      password2: '',
       errors: {}
     };
 
@@ -14,12 +15,11 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn === true) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.signedIn === true) {
       this.props.history.push('/login');
     }
-
-    this.setState({errors: nextProps.errors})
+    // this.setState({errors: prevProps.errors})
   }
 
   update(field) {
