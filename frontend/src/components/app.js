@@ -7,7 +7,6 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Footer from './nav/footer';
-import Sidebar from './nav/sidebar';
 import WallContainer from './wall/wall_container';
 import MapContainer from './map/map_container';
 import SpotsContainer from './spots/spots_container';
