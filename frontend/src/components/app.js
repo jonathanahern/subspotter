@@ -14,7 +14,7 @@ import SpotFormContainer from './spots/spot_form_container';
 import ProfileContainer from './profile/profile_container';
 
 const App = () => (
-  <div>
+  <>
     <NavBarContainer />
     <Switch>
       <Route exact path="/wall" component={WallContainer} />
@@ -28,7 +28,7 @@ const App = () => (
       <Route exact path="/spotter" component={ProfileContainer} />
     </Switch>
     <Footer/>
-  </div>
+  </>
 );
 
 export default App;
