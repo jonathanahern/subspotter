@@ -9,7 +9,11 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  created_spots: [{
+    type: Schema.Types.ObjectId, 
+    ref: 'Spots'
+  }]
 })
 
 module.exports = User = mongoose.model('User', UserSchema);
