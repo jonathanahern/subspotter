@@ -10,18 +10,25 @@ router.get("/test", (req, res) => {
   res.json({msg: "This is the user route"})
 });
 
+router.get("/:id", (req, res) => {
+  debugger
+  User.findById(req.params.id).populate('spots').exec()
+    .then(user => res.json(user.spots))
+    .catch(err =>
+      res.status(404).json({ nouserfound: "This user does not exist" })
+    );
+});
+
 router.post("/register", (req, res) => {
   User.findOne({ username: req.body.username })
   .then(user => {
     if (user) {
       return res.status(400).json({username: "This user is already registered"})
     } else {
-      debugger
       const newUser = new User({
         username: req.body.username, 
         password: req.body.password
       })
-debugger
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;

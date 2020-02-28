@@ -3,7 +3,6 @@ import { fetchUserSpots } from '../../actions/spot_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     spots: Object.values(state.spots.user),
     currentUser: state.session.user

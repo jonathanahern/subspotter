@@ -2,7 +2,6 @@ import React from 'react';
 
 class SpotItem extends React.Component {
   render() {
-    debugger
     return (
       <li key={this.props.key}>
         <h2>Spot ID: {this.props.key}</h2>
