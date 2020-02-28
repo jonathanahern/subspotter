@@ -35,11 +35,11 @@ class Map extends React.Component {
       disableDefaultUI: true
     };
 
-    // this.map = new window.google.maps.Map(document.getElementById('myMap'), mapOptions);
-    // var transitLayer = new window.google.maps.TransitLayer();
-    // transitLayer.setMap(this.map);
-    // this.map.set('clickableIcons', false);
-    // this.map.set('styles', [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]);
+    this.map = new window.google.maps.Map(document.getElementById('myMap'), mapOptions);
+    var transitLayer = new window.google.maps.TransitLayer();
+    transitLayer.setMap(this.map);
+    this.map.set('clickableIcons', false);
+    this.map.set('styles', [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]);
     
     this.selectedLine = document.getElementById("spanALL");
     
@@ -89,14 +89,14 @@ class Map extends React.Component {
   }
 
   placeMarkers(){
-    console.log(this.currentLine)
+    // console.log(this.currentLine)
   }
 
   render() {
     return (
       <>
       <form >
-        
+
           <div id="filter-bar">
             <label className="filterLabel">START:
               <input className="date-dropdown" type="date" id="datemin" value={this.state.startDate} onChange={this.update("startDate")}/>
