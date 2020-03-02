@@ -34,10 +34,3 @@ class Footer extends React.Component {
 
 export default Footer;
 
-{/* <div className="logo-container">
-                        <span className="closebtn" onClick={this.closeSidebar}>&times;</span>
-                    <div id="top-line"></div>
-                        <img src={subwayTrain} alt=""></img>
-                    <div id="bottom-line"></div>
-                    <h1>SUBSPOTTER</h1>
-                </div> */}

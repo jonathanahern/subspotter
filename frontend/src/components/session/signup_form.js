@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import "./sessions.css";
+import { Link } from "react-router-dom";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -32,8 +34,8 @@ class SignupForm extends React.Component {
     e.preventDefault();
     let user = {
       username: this.state.username,
-      password: this.state.password,
-      password2: this.state.password2
+      password: this.state.password
+      // password2: this.state.password2
     };
 
     this.props.signup(user, this.props.history); 
@@ -53,9 +55,11 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <>
       <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="signup-form">
+          <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div>
+            <Link className="loginLink" to={'/login'}>LOGIN</Link>
             <br/>
               <input type="text"
                 value={this.state.username}
@@ -68,18 +72,22 @@ class SignupForm extends React.Component {
                 onChange={this.update('password')}
                 placeholder="Password"
               />
-            <br/>
+            {/* <br/>
               <input type="password"
                 value={this.state.password2}
                 onChange={this.update('password2')}
                 placeholder="Confirm Password"
-              />
+              /> */}
             <br/>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="SIGN UP" />
             {this.renderErrors()}
           </div>
         </form>
       </div>
+      <div className="backdrop-color">
+        
+      </div>
+    </>
     );
   }
 }

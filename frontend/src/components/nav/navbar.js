@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 // import './navbar.css'
+import trainLogo from "./trainLogo.png";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -16,26 +17,34 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
+
       if (this.props.loggedIn) {
         return (
-            <div>
-                <button onClick={this.logoutUser}>Logout</button>
+          <>
+          <div id="logo-center">
+            <div id="logo-container">
+                <img src={trainLogo} alt=""></img><span>SUBSPOTTER</span>
             </div>
+          </div>
+          <div>
+            <button id="logoutButton" onClick={this.logoutUser}>LOGOUT</button>
+          </div>
+          </>
         );
       } else {
         return (
-            <div>
-                <Link to={'/signup'}>Signup</Link>
-                <Link to={'/login'}>Login</Link>
+          <div id="logo-center">
+            <div id="logo-container">
+              <img src={trainLogo} alt=""></img><span>SUBSPOTTER</span>
             </div>
+          </div>
         );
       }
   }
 
   render() {
       return (
-        <div>
-            <h1>SubSpotter</h1>
+        <div id="header-main-page">
             { this.getLinks() }
         </div>
       );

@@ -1,12 +1,16 @@
-body, html{
+body, html {
     height: 100%;
+    overflow: hidden;
+}
+
+#header-main-page {
+    position: relative;
 }
 
 li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    
 }
 
 #footer-container{
@@ -46,6 +50,15 @@ li {
     height: 30px;
     margin-bottom: 8px;
 }
+
+#logoutButton{
+    padding: 4px;
+    color: white;
+    position: absolute;
+    top: 7px;
+    right: 2px;
+}
+
 
 /* #hamburger{
     font-size:30px;
